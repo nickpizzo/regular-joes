@@ -28,7 +28,12 @@ export default function Navbar() {
         <ul className="navbar-nav mx-auto">
           <li className="nav-item">
             <Link to="/" className="nav-link text-capitalize">
-              Test
+              Home
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/about" className="nav-link text-capitalize">
+              About
             </Link>
           </li>
           <li className="nav-item ml-sm-5">
