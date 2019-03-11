@@ -28,7 +28,6 @@ export default function Menu(props) {
 
   return (
     <section className="menu py-5">
-      <div>{console.log(categories)}</div>
       <div className="container">
         <Title title="Best of Our Menu" />
         {/* categories */}
