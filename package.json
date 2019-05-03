@@ -17,6 +17,7 @@
     "gatsby-plugin-snipcart": "^1.0.6",
     "gatsby-source-contentful": "^2.0.35",
     "gatsby-source-filesystem": "^2.0.23",
+    "gatsby-transformer-remark": "^2.3.12",
     "gatsby-transformer-sharp": "^2.1.15",
     "node-sass": "^4.12.0",
     "prop-types": "^15.7.2",

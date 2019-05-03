@@ -7,11 +7,10 @@
 
 import PropTypes from "prop-types"
 import React from "react"
-import "./bootstrap.min.css"
+import "../styles/index.scss"
+import "./layout.css"
 import Footer from "./Globals/Footer"
 import Navbar from "./Globals/Navbar"
-import "./layout.css"
-import "../styles/index.scss"
 
 const Layout = ({ children }) => (
   <>

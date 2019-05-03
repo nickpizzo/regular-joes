@@ -36,6 +36,11 @@ export default function Navbar() {
               About
             </Link>
           </li>
+          <li className="nav-item">
+            <Link to="/blog" className="nav-link text-capitalize">
+              Blog
+            </Link>
+          </li>
           <li className="nav-item ml-sm-5">
             <FaCartArrowDown className="cart-icon snipcart-checkout" />
           </li>
