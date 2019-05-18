@@ -25,7 +25,7 @@ export default function Navbar() {
             : "collapse navbar-collapse"
         }
       >
-        <ul className="navbar-nav mx-auto">
+        <ul className="navbar-nav">
           <li className="nav-item">
             <Link to="/" className="nav-link text-capitalize">
               Home
@@ -41,8 +41,12 @@ export default function Navbar() {
               Blog
             </Link>
           </li>
-          <li className="nav-item ml-sm-5">
-            <FaCartArrowDown className="cart-icon snipcart-checkout" />
+          <li className="nav-item ml-sm-5 cart-container">
+            <div className="snipcart-summary snipcart-checkout">
+              <span className="snipcart-total-items" />
+              <span> &nbsp;Items in Cart&nbsp;</span>
+              <FaCartArrowDown className="cart-icon" />
+            </div>
           </li>
         </ul>
       </div>

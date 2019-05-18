@@ -1,0 +1,22 @@
+.navbar-nav {
+  width: 100%;
+  .nav-item {
+    display: flex;
+    align-items: center;
+  }
+  .cart-container {
+    width: 100%;
+    justify-content: flex-end;
+    .snipcart-summary {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      color: rgba(0, 0, 0, 0.5);
+      &:hover {
+        span {
+          color: rgba(0, 0, 0, 0.7);
+        }
+      }
+    }
+  }
+}
