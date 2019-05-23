@@ -1,7 +1,21 @@
 import React from "react"
 import { graphql, StaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
-import { Card, CardTitle, CardBody, Form, FormGroup, Input } from "reactstrap"
+import {
+  Card,
+  CardTitle,
+  CardBody,
+  Form,
+  FormGroup,
+  Input,
+  CardText,
+} from "reactstrap"
+import {
+  FaFacebookSquare,
+  FaTwitterSquare,
+  FaInstagram,
+  FaLinkedin,
+} from "react-icons/fa"
 
 const sidebarQuery = graphql`
   query {
@@ -32,8 +46,63 @@ const sidebarQuery = graphql`
   }
 `
 
-const Sidebar = () => (
+const Sidebar = ({ author, authorImageFluid }) => (
   <div>
+    {author && (
+      <Card>
+        <Img className="card-image-top" fluid={authorImageFluid} />
+        <CardBody>
+          <CardTitle className="text-center text-uppercase mb-3">
+            {author.name}
+          </CardTitle>
+          <CardText>{author.bio}</CardText>
+          <div className="author-social-links text-center">
+            <ul>
+              <li>
+                <a
+                  href={author.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="facebook"
+                >
+                  <FaFacebookSquare />
+                </a>
+              </li>
+              <li>
+                <a
+                  href={author.twitter}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="twitter"
+                >
+                  <FaTwitterSquare />
+                </a>
+              </li>
+              <li>
+                <a
+                  href={author.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="instagram"
+                >
+                  <FaInstagram />
+                </a>
+              </li>
+              <li>
+                <a
+                  href={author.linkedIn}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="linkedin"
+                >
+                  <FaLinkedin />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </CardBody>
+      </Card>
+    )}
     <Card>
       <CardBody>
         <CardTitle className="text-center text-uppercase mb-3">

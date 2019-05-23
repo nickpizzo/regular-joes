@@ -64,7 +64,7 @@ export default function Menu(props) {
                   <div className="flex-grow-1 px-3">
                     <div className="d-flex justify-content-between">
                       <h6 className="mb-0">
-                        <small className="text-capitalize">{node.title}</small>
+                        <h6 className="text-capitalize">{node.title}</h6>
                       </h6>
                       <h6 className="mb-0 text-darker-yellow">${node.price}</h6>
                     </div>

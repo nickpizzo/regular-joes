@@ -1,7 +1,7 @@
 ---
 title: "Second Post - Do You Need A Chemex?"
 date: 2018-12-02 07:00:00
-author: "Jane Doe"
+author: "Joe Doe"
 image: ../../images/post2.jpg
 tags:
   - beans

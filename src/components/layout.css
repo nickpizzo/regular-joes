@@ -38,7 +38,7 @@ h6 {
 
 .default-background,
 .about-background {
-  min-height: 100vh;
+  min-height: 34vh;
   display: flex;
   align-items: center;
   justify-content: center;

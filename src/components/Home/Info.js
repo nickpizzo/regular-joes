@@ -16,11 +16,6 @@ export default function Info() {
               sed efficitur. Cras pharetra, tortor in gravida finibus, erat
               tellus porta diam, nec condimentum mi turpis nec magna. Donec nec
               enim sollicitudin, tincidunt dolor eget, consectetur urna.
-              Phasellus in pellentesque felis. Nulla eleifend tellus quis urna
-              posuere suscipit. In tristique magna in arcu lobortis, sit amet
-              vehicula nisl gravida. Donec id lorem purus. Pellentesque eget dui
-              hendrerit, eleifend sem et, ornare velit. Praesent ligula lacus,
-              sodales accumsan tincidunt sed, malesuada in felis.
             </p>
             <Link to="/about">
               <button className="btn text-uppercase btn-yellow">

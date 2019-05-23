@@ -1,9 +1,35 @@
+.card {
+  margin-bottom: 30px;
+  .card-subtitle {
+    font-size: 14px;
+    margin-bottom: 0.5em;
+    span {
+      color: var(--mainBrown);
+      margin-right: 8px;
+    }
+  }
+}
+
+.author-social-links {
+  ul {
+    padding: 0;
+    list-style-image: none;
+    list-style-type: none;
+    li {
+      a {
+        svg {
+          color: var(--mainBrown);
+          font-size: 26px;
+        }
+      }
+    }
+  }
+}
+
 .blog-page-wrap {
   background: $mainLight;
   padding: 1em 0;
-  .card {
-    margin-bottom: 30px;
-  }
+
   h2 {
     margin: 0.5em;
     line-height: 1.1;
@@ -16,5 +42,13 @@
     li {
       margin-right: 10px;
     }
+
+    .badge-primary {
+      background-color: var(--mainYellow);
+    }
+  }
+
+  .card-title h5 {
+    color: var(--mainBrown);
   }
 }
