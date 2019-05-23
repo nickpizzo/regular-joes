@@ -26,6 +26,21 @@
   }
 }
 
+.social-share-links {
+  ul {
+    padding: 0;
+    list-style-image: none;
+    list-style-type: none;
+    li {
+      a {
+        svg {
+          font-size: 36px;
+        }
+      }
+    }
+  }
+}
+
 .blog-page-wrap {
   background: $mainLight;
   padding: 1em 0;
