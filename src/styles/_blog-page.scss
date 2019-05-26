@@ -41,7 +41,8 @@
   }
 }
 
-.blog-page-wrap {
+.blog-page-wrap,
+.tags-page-wrap {
   background: $mainLight;
   padding: 1em 0;
 
@@ -49,10 +50,15 @@
     margin: 0.5em;
     line-height: 1.1;
   }
+  ul.all-tags {
+    list-style: none;
+    list-style-image: none;
+  }
   ul.post-tags {
     padding: 0;
     display: inline-flex;
     list-style: none;
+    list-style-image: none;
 
     li {
       margin-right: 10px;

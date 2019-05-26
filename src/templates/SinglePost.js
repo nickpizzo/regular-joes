@@ -7,7 +7,7 @@ import { Card, CardBody, Badge, CardSubtitle, Row, Col } from "reactstrap"
 import Img from "gatsby-image"
 import slugify from "../util/utilityFunctions"
 import authors from "../util/authors"
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa"
+import { FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa"
 import { DiscussionEmbed } from "disqus-react"
 
 export const postQuery = graphql`
