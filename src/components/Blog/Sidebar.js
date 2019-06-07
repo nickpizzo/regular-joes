@@ -47,7 +47,7 @@ const sidebarQuery = graphql`
 `
 
 const Sidebar = ({ author, authorImageFluid }) => (
-  <div>
+  <div className="sidebar">
     {author && (
       <Card>
         <Img className="card-image-top" fluid={authorImageFluid} />
@@ -128,38 +128,34 @@ const Sidebar = ({ author, authorImageFluid }) => (
         />
       </CardBody>
     </Card>
-    <Card>
-      <CardBody>
-        <CardTitle className="text-center text-uppercase mb-3">
-          Recent Posts
-        </CardTitle>
+    <div className="recent-posts-wrap">
+      <CardTitle className="text-center text-uppercase mb-3">
+        Recent Posts
+      </CardTitle>
 
-        <StaticQuery
-          query={sidebarQuery}
-          render={data => (
-            <div>
-              {data.allMarkdownRemark.edges.map(({ node }) => (
-                <Card key={node.id}>
-                  <Link to={node.fields.slug}>
-                    <Img
-                      className="card-image-top"
-                      fluid={node.frontmatter.image.childImageSharp.fluid}
-                    />
-                  </Link>
-                  <CardBody>
-                    <CardTitle>
-                      <Link to={node.fields.slug}>
-                        {node.frontmatter.title}
-                      </Link>
-                    </CardTitle>
-                  </CardBody>
-                </Card>
-              ))}
-            </div>
-          )}
-        />
-      </CardBody>
-    </Card>
+      <StaticQuery
+        query={sidebarQuery}
+        render={data => (
+          <div>
+            {data.allMarkdownRemark.edges.map(({ node }) => (
+              <Card key={node.id}>
+                <Link to={node.fields.slug}>
+                  <Img
+                    className="card-image-top"
+                    fluid={node.frontmatter.image.childImageSharp.fluid}
+                  />
+                </Link>
+                <CardBody>
+                  <CardTitle>
+                    <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
+                  </CardTitle>
+                </CardBody>
+              </Card>
+            ))}
+          </div>
+        )}
+      />
+    </div>
   </div>
 )
 

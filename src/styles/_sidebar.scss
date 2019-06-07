@@ -1,3 +1,33 @@
+.sidebar {
+  .card-title {
+    text-transform: capitalize !important;
+    color: rgba(0, 0, 0, 0.5);
+  }
+  .card {
+    &:hover {
+      .card-title {
+        a {
+          text-decoration: underline;
+        }
+      }
+    }
+    .card-title {
+      a {
+        font-family: "Courier New", Courier !important;
+        color: var(--mainBrown);
+        line-height: 1.2;
+      }
+    }
+  }
+  .recent-posts-wrap {
+    padding: 1.25rem;
+    background: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+  }
+}
+
 .author-social-links {
   ul {
     display: inline-flex;

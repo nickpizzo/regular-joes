@@ -8,7 +8,7 @@ import Sidebar from "../components/Blog/Sidebar"
 export default function TagsPage({ pageContext }) {
   const { tags, tagPostCounts } = pageContext
   return (
-    <Layout pageTitle="All Tags">
+    <Layout>
       <SEO title="All Tags" keywords={["tags", "topics"]} />
       <div className="tags-page-wrap">
         <div className="container">
