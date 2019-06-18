@@ -11,6 +11,7 @@ const blogQuery = graphql`
     allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/(posts)/.*.md$/" } }
       sort: { order: DESC, fields: [frontmatter___date] }
+      limit: 2
     ) {
       edges {
         node {
