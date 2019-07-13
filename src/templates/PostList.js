@@ -5,6 +5,7 @@ import SEO from "../components/seo"
 import { graphql } from "gatsby"
 import { Col, Row } from "reactstrap"
 import Sidebar from "../components/Blog/Sidebar"
+import PaginationBlock from "../components/PaginationBlock"
 
 export const postListQuery = graphql`
   query postListQuery($skip: Int!, $limit: Int!) {
@@ -42,7 +43,7 @@ export const postListQuery = graphql`
 
 const PostList = props => {
   const posts = props.data.allMarkdownRemark.edges
-  const { currentPage } = props.pageContext
+  const { currentPage, numberOfPages } = props.pageContext
 
   return (
     <Layout>
@@ -66,6 +67,10 @@ const PostList = props => {
                   fluid={node.frontmatter.image.childImageSharp.fluid}
                 />
               ))}
+              <PaginationBlock
+                currentPage={currentPage}
+                numberOfPages={numberOfPages}
+              />
             </Col>
             <Col md="4">
               <Sidebar />
