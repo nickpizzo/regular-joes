@@ -1,7 +1,10 @@
 import React from "react"
 import Layout from "../components/layout"
 import Post from "../components/Blog/Post"
+import SEO from "../components/seo"
 import { graphql } from "gatsby"
+import { Col, Row } from "reactstrap"
+import Sidebar from "../components/Blog/Sidebar"
 
 export const postListQuery = graphql`
   query postListQuery($skip: Int!, $limit: Int!) {
@@ -42,19 +45,34 @@ const PostList = props => {
   const { currentPage } = props.pageContext
 
   return (
-    <Layout pageTitle={`Page: ${currentPage}`}>
-      {posts.map(({ node }) => (
-        <Post
-          key={node.id}
-          slug={node.fields.slug}
-          title={node.frontmatter.title}
-          author={node.frontmatter.author}
-          date={node.frontmatter.date}
-          body={node.excerpt}
-          tags={node.frontmatter.tags}
-          fluid={node.frontmatter.image.childImageSharp.fluid}
-        />
-      ))}
+    <Layout>
+      <SEO
+        title={`Blog Page: ${currentPage}`}
+        keywords={[`gatsby`, `application`, `react`]}
+      />
+      <div className="blog-page-wrap">
+        <div className="container">
+          <Row>
+            <Col md="8">
+              {posts.map(({ node }) => (
+                <Post
+                  key={node.id}
+                  slug={node.fields.slug}
+                  title={node.frontmatter.title}
+                  author={node.frontmatter.author}
+                  date={node.frontmatter.date}
+                  body={node.excerpt}
+                  tags={node.frontmatter.tags}
+                  fluid={node.frontmatter.image.childImageSharp.fluid}
+                />
+              ))}
+            </Col>
+            <Col md="4">
+              <Sidebar />
+            </Col>
+          </Row>
+        </div>
+      </div>
     </Layout>
   )
 }
