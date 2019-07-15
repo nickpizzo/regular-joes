@@ -41,6 +41,11 @@ export default function Navbar() {
               Blog
             </Link>
           </li>
+          <li className="nav-item">
+            <Link to="/team" className="nav-link text-capitalize">
+              Team
+            </Link>
+          </li>
           <li className="nav-item ml-sm-5 cart-container">
             <div className="snipcart-summary snipcart-checkout">
               <span>My Cart&nbsp;</span>
